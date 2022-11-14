@@ -21,9 +21,10 @@ class ScoreBoard(Turtle):
         self.updatesc()
 
     def game_over(self):
-
         self.goto(0, 20)
         self.color("Red")
         self.write("GAME OVER", move=False, align="center", font=("Chiller", 40, "normal"))
-        self.goto(0,-20)
+        self.goto(0, -20)
         self.write(f"Your Score is {self.score}", move=False, align="center", font=("Chiller", 40, "normal"))
+        self.goto(0, -280)
+        self.write("Made by Zikron", move=False, align="center", font=("Comic Sans MS", 15, "normal"))
