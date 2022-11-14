@@ -17,20 +17,18 @@ class Snake:
 
     def create_snake(self):
         for position in STARTING_POSITIONS:
-           self.adds(position)
+            self.adds(position)
 
-
-    def adds(self,position):
+    def adds(self, position):
         t = Turtle()
         t.shape("square")
         t.color("White")
         t.penup()
         t.goto(position)
         self.turtles.append(t)
+
     def yum(self):
         self.adds(self.turtles[-1].position())
-
-
 
     def move(self):
         for i in range(len(self.turtles) - 1, 0, -1):
@@ -55,10 +53,7 @@ class Snake:
         if self.head.heading() != LEFT:
             self.head.setheading(RIGHT)
 
-
     def nono(self):
         for i in range(len(self.turtles) - 1, 0, -1):
             if self.turtles[i].distance(self.head) < 15:
                 return True
-
-

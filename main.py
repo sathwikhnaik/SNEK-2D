@@ -9,13 +9,11 @@ screen.setup(width=600, height=600)
 screen.bgcolor("black")
 screen.title("SNEK")
 screen.tracer(0)
-user_input = screen.textinput(title="Difficulty", prompt= "Easy, Medium or Hard")
-
+user_input = screen.textinput(title="Difficulty", prompt="Easy, Medium or Hard")
 
 snake = Snake()
 food = Food()
-sc= ScoreBoard()
-
+sc = ScoreBoard()
 
 screen.listen()
 screen.onkey(snake.up, "Up")
